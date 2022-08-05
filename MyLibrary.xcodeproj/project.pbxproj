@@ -28,6 +28,7 @@
 		C5BC7C65289D279F00C740BD /* SearchNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C64289D279F00C740BD /* SearchNetworkError.swift */; };
 		C5BC7C67289D2C6D00C740BD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */; };
 		C5BC7C69289D2C7600C740BD /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C68289D2C7600C740BD /* MainModel.swift */; };
+		C5BC7C72289D3BFB00C740BD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C71289D3BFB00C740BD /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C5BC7C64289D279F00C740BD /* SearchNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkError.swift; sourceTree = "<group>"; };
 		C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C5BC7C68289D2C7600C740BD /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		C5BC7C71289D3BFB00C740BD /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CC048CE0F48070392BBC6C07 /* Pods-MyLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibrary.debug.xcconfig"; path = "Target Support Files/Pods-MyLibrary/Pods-MyLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				C5BC7C34289D105F00C740BD /* Assets.xcassets */,
 				C5BC7C36289D105F00C740BD /* LaunchScreen.storyboard */,
 				C5BC7C39289D106000C740BD /* Info.plist */,
+				C5BC7C71289D3BFB00C740BD /* Storage.swift */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				C5BC7C63289D270800C740BD /* Book.swift in Sources */,
 				C5BC7C50289D1A2E00C740BD /* BookListCellData.swift in Sources */,
 				C5BC7C46289D17F500C740BD /* SearchBarViewModel.swift in Sources */,
+				C5BC7C72289D3BFB00C740BD /* Storage.swift in Sources */,
 				C5BC7C49289D18F200C740BD /* BookListView.swift in Sources */,
 				C5BC7C40289D115300C740BD /* MainViewController.swift in Sources */,
 				C5BC7C65289D279F00C740BD /* SearchNetworkError.swift in Sources */,
