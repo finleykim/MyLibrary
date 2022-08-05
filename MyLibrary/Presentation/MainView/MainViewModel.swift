@@ -5,20 +5,34 @@
 //  Created by Finley on 2022/08/05.
 //
 
-import RxSwift
 import RxCocoa
+import RxSwift
 
 struct MainViewModel {
     let disposeBag = DisposeBag()
     
     let searchBarViewModel = SearchBarViewModel()
-    let blogListViewModel = BookListViewModel()
+    let bookListViewModel = BookListViewModel()
     
     let alertActionTapped = PublishRelay<MainViewController.AlertAction>()
     let shouldPresentAlert: Signal<MainViewController.Alert>
     
-    init() {
-
+    init(model: MainModel = MainModel()) {
+        let bookResult = searchBarViewModel.shouldLoadResult
+            .flatMapLatest(model.searchBook)
+            .share()
+        
+        let bookValue = bookResult
+            .map(model.getBookValue)
+            .filter { $0 != nil }
+        
+        let bookError = bookResult
+            .map(model.getBookError)
+            .filter { $0 != nil }
+        
+        let cellData = bookValue
+            .map(model.getBookListCellData)
+        
         let sortedType = alertActionTapped
             .filter {
                 switch $0 {
@@ -30,7 +44,17 @@ struct MainViewModel {
             }
             .startWith(.title)
         
-        let alertSheetForSorting = blogListViewModel.filterViewModel.sortButtonTapped
+        //MainViewController -> ListView
+        Observable
+            .combineLatest(
+                            sortedType,
+                            cellData,
+                            resultSelector: model.sort
+                        )
+            .bind(to: bookListViewModel.bookListCellData)
+            .disposed(by: disposeBag)
+        
+        let alertSheetForSorting = bookListViewModel.filterViewModel.sortButtonTapped
             .map { _ -> MainViewController.Alert in
                 return (title: nil, message: nil, actions: [.title, .datetime, .cancel], style: .actionSheet)
             }
@@ -48,7 +72,7 @@ struct MainViewModel {
                 )
             }
         
-        self.shouldPresentAlert = Observable //뷰모델에서 이벤트 스트림을 하나로 묶기위해 정의한 shouldPresentAlert이 이런 애라는 걸 알려준다.
+        self.shouldPresentAlert = Observable
             .merge(
                 alertSheetForSorting,
                 alertForErrorMessage
