@@ -26,6 +26,8 @@
 		C5BC7C60289D26DD00C740BD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C5F289D26DD00C740BD /* Network.swift */; };
 		C5BC7C63289D270800C740BD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C62289D270800C740BD /* Book.swift */; };
 		C5BC7C65289D279F00C740BD /* SearchNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C64289D279F00C740BD /* SearchNetworkError.swift */; };
+		C5BC7C67289D2C6D00C740BD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */; };
+		C5BC7C69289D2C7600C740BD /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C68289D2C7600C740BD /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		C5BC7C5F289D26DD00C740BD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C5BC7C62289D270800C740BD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C5BC7C64289D279F00C740BD /* SearchNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkError.swift; sourceTree = "<group>"; };
+		C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C5BC7C68289D2C7600C740BD /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		CC048CE0F48070392BBC6C07 /* Pods-MyLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibrary.debug.xcconfig"; path = "Target Support Files/Pods-MyLibrary/Pods-MyLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,15 +101,12 @@
 			children = (
 				C5BC7C2B289D105E00C740BD /* AppDelegate.swift */,
 				C5BC7C2D289D105E00C740BD /* SceneDelegate.swift */,
-				C5BC7C3F289D115300C740BD /* MainViewController.swift */,
+				C5BC7C6C289D2D0600C740BD /* Presentation */,
+				C5BC7C5A289D1CF200C740BD /* Entities */,
+				C5BC7C61289D26E200C740BD /* Network */,
 				C5BC7C34289D105F00C740BD /* Assets.xcassets */,
 				C5BC7C36289D105F00C740BD /* LaunchScreen.storyboard */,
 				C5BC7C39289D106000C740BD /* Info.plist */,
-				C5BC7C5A289D1CF200C740BD /* Entities */,
-				C5BC7C47289D18CC00C740BD /* SearchBar */,
-				C5BC7C4E289D190900C740BD /* BookList */,
-				C5BC7C55289D1BC500C740BD /* FilterView */,
-				C5BC7C61289D26E200C740BD /* Network */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -156,6 +157,35 @@
 				C5BC7C5F289D26DD00C740BD /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C5BC7C6A289D2C8000C740BD /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				C5BC7C3F289D115300C740BD /* MainViewController.swift */,
+				C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */,
+				C5BC7C68289D2C7600C740BD /* MainModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		C5BC7C6B289D2C8B00C740BD /* Subcomponents */ = {
+			isa = PBXGroup;
+			children = (
+				C5BC7C47289D18CC00C740BD /* SearchBar */,
+				C5BC7C4E289D190900C740BD /* BookList */,
+				C5BC7C55289D1BC500C740BD /* FilterView */,
+			);
+			path = Subcomponents;
+			sourceTree = "<group>";
+		};
+		C5BC7C6C289D2D0600C740BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C5BC7C6A289D2C8000C740BD /* MainView */,
+				C5BC7C6B289D2C8B00C740BD /* Subcomponents */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		E0C7F06F06A2EF64390AB0F4 /* Pods */ = {
@@ -289,11 +319,13 @@
 				C5BC7C65289D279F00C740BD /* SearchNetworkError.swift in Sources */,
 				C5BC7C44289D17EA00C740BD /* SearchBar.swift in Sources */,
 				C5BC7C60289D26DD00C740BD /* Network.swift in Sources */,
+				C5BC7C67289D2C6D00C740BD /* MainViewModel.swift in Sources */,
 				C5BC7C2C289D105E00C740BD /* AppDelegate.swift in Sources */,
 				C5BC7C5E289D26D400C740BD /* API.swift in Sources */,
 				C5BC7C4D289D190400C740BD /* BookListViewModel.swift in Sources */,
 				C5BC7C4B289D18FA00C740BD /* BookListCell.swift in Sources */,
 				C5BC7C54289D1B9E00C740BD /* FilterViewModel.swift in Sources */,
+				C5BC7C69289D2C7600C740BD /* MainModel.swift in Sources */,
 				C5BC7C52289D1B9600C740BD /* FilterView.swift in Sources */,
 				C5BC7C59289D1CE500C740BD /* AlertActionConvertible.swift in Sources */,
 				C5BC7C2E289D105E00C740BD /* SceneDelegate.swift in Sources */,

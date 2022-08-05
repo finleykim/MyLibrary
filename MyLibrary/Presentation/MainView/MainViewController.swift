@@ -25,8 +25,18 @@ class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind() {
+    func bind(_ viewModel: MainViewModel) {
+        
+        listView.bind(viewModel.bookListViewModel)
+        searchBar.bind(viewModel.searchBarViewModel)
 
+        viewModel.shouldPresentAlert
+            .flatMapLatest { alert -> Signal<AlertAction> in
+                let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
+                return self.presentAlertController(alertController, actions: alert.actions)
+            }
+            .emit(to: viewModel.alertActionTapped)
+            .disposed(by: disposeBag)
     }
 
     private func attribute() {
