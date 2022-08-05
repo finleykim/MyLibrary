@@ -13,6 +13,8 @@
 		C5BC7C35289D105F00C740BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BC7C34289D105F00C740BD /* Assets.xcassets */; };
 		C5BC7C38289D105F00C740BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BC7C36289D105F00C740BD /* LaunchScreen.storyboard */; };
 		C5BC7C40289D115300C740BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C3F289D115300C740BD /* MainViewController.swift */; };
+		C5BC7C44289D17EA00C740BD /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C43289D17EA00C740BD /* SearchBar.swift */; };
+		C5BC7C46289D17F500C740BD /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C45289D17F500C740BD /* SearchBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C5BC7C37289D105F00C740BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5BC7C39289D106000C740BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BC7C3F289D115300C740BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C5BC7C43289D17EA00C740BD /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C5BC7C45289D17F500C740BD /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		CC048CE0F48070392BBC6C07 /* Pods-MyLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibrary.debug.xcconfig"; path = "Target Support Files/Pods-MyLibrary/Pods-MyLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,8 @@
 				C5BC7C34289D105F00C740BD /* Assets.xcassets */,
 				C5BC7C36289D105F00C740BD /* LaunchScreen.storyboard */,
 				C5BC7C39289D106000C740BD /* Info.plist */,
+				C5BC7C43289D17EA00C740BD /* SearchBar.swift */,
+				C5BC7C45289D17F500C740BD /* SearchBarViewModel.swift */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -85,7 +91,6 @@
 				CC048CE0F48070392BBC6C07 /* Pods-MyLibrary.debug.xcconfig */,
 				A17D2DA278E744B9DF976B81 /* Pods-MyLibrary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,7 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BC7C46289D17F500C740BD /* SearchBarViewModel.swift in Sources */,
 				C5BC7C40289D115300C740BD /* MainViewController.swift in Sources */,
+				C5BC7C44289D17EA00C740BD /* SearchBar.swift in Sources */,
 				C5BC7C2C289D105E00C740BD /* AppDelegate.swift in Sources */,
 				C5BC7C2E289D105E00C740BD /* SceneDelegate.swift in Sources */,
 			);
