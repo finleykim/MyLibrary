@@ -10,4 +10,15 @@ target 'MyLibrary' do
     pod 'RxCocoa', '6.5.0'
     pod 'Kingfisher', '~> 7.0'
     pod 'SnapKit', '~> 5.6.0'
+
+
+  target 'MyLibraryTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Stubber'
+    pod 'Nimble'
+    pod 'RxBlocking'
+    pod 'RxTest'
+  end
+
 end
