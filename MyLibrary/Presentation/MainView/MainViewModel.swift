@@ -44,7 +44,6 @@ struct MainViewModel {
             }
             .startWith(.title)
         
-        //MainViewController -> ListView
         Observable
             .combineLatest(
                             sortedType,
@@ -80,4 +79,3 @@ struct MainViewModel {
             .asSignal(onErrorSignalWith: .empty())
     }
 }
-

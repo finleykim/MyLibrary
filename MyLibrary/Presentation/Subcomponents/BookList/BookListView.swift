@@ -18,6 +18,7 @@ class BookListView: UITableView {
         )
     )
     
+    //MainViewController -> BookListView
     let cellData = PublishSubject<[BookListCellData]>()
     
     override init(frame: CGRect, style: UITableView.Style) {

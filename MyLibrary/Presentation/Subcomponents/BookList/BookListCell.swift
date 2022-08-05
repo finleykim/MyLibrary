@@ -72,4 +72,3 @@ class BookListCell: UITableViewCell {
         datetimeLabel.text = datetime
     }
 }
-

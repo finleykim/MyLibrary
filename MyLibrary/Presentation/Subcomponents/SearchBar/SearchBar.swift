@@ -5,9 +5,8 @@
 //  Created by Finley on 2022/08/05.
 //
 
-import RxCocoa
 import RxSwift
-import SnapKit
+import RxCocoa
 
 class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
@@ -73,5 +72,4 @@ extension Reactive where Base: SearchBar {
         }
     }
 }
-
 
