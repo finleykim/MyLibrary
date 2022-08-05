@@ -11,6 +11,13 @@ import RxCocoa
 class BookListView: UITableView {
     let disposeBag = DisposeBag()
     
+    let headerView = FilterView(
+        frame: CGRect(
+            origin: .zero,
+            size: CGSize(width: UIScreen.main.bounds.width, height: 50)
+        )
+    )
+    
     let cellData = PublishSubject<[BookListCellData]>()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -24,6 +31,7 @@ class BookListView: UITableView {
     }
     
     func bind(_ viewModel: BookListViewModel) {
+        headerView.bind(viewModel.filterViewModel)
         viewModel.cellData
             .asDriver(onErrorJustReturn: [])
             .drive(self.rx.items) { tv, row, data in
@@ -40,6 +48,7 @@ class BookListView: UITableView {
         self.register(BookListCell.self, forCellReuseIdentifier: "BookListCell")
         self.separatorStyle = .singleLine
         self.rowHeight = 100
+        self.tableHeaderView = headerView
     }
 }
 

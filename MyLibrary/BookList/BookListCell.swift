@@ -73,4 +73,3 @@ class BookListCell: UITableViewCell {
     }
 }
 
-
