@@ -5,8 +5,8 @@
 //  Created by Finley on 2022/08/05.
 //
 
-import RxCocoa
 import RxSwift
+import RxCocoa
 
 struct SearchBarViewModel {
     let queryText = PublishRelay<String?>()
