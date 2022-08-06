@@ -164,6 +164,7 @@
 				C5BC7C4A289D18FA00C740BD /* BookListCell.swift */,
 				C5BC7C48289D18F200C740BD /* BookListView.swift */,
 				C5BC7C4C289D190400C740BD /* BookListViewModel.swift */,
+				C5BC7C55289D1BC500C740BD /* FilterView */,
 			);
 			path = BookList;
 			sourceTree = "<group>";
@@ -203,6 +204,7 @@
 				C5BC7C3F289D115300C740BD /* MainViewController.swift */,
 				C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */,
 				C5BC7C68289D2C7600C740BD /* MainModel.swift */,
+				C5BC7C6B289D2C8B00C740BD /* Subcomponents */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -212,7 +214,6 @@
 			children = (
 				C5BC7C47289D18CC00C740BD /* SearchBar */,
 				C5BC7C4E289D190900C740BD /* BookList */,
-				C5BC7C55289D1BC500C740BD /* FilterView */,
 			);
 			path = Subcomponents;
 			sourceTree = "<group>";
@@ -221,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				C5BC7C6A289D2C8000C740BD /* MainView */,
-				C5BC7C6B289D2C8B00C740BD /* Subcomponents */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
