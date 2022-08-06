@@ -13,20 +13,20 @@ struct Book: Decodable {
 
 struct BookDocument: Decodable {
     let title: String?
-    let description: String?
+    let description: [String]?
     let thumbnail: String?
     let datetime: Date?
     
     enum CodingKeys: String, CodingKey {
         case title, thumbnail, datetime
-        case description = "contents"
+        case description = "authors"
     }
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         self.title = try? values.decode(String?.self, forKey: .title)
-        self.description = try? values.decode(String?.self, forKey: .description)
+        self.description = try? values.decode([String]?.self, forKey: .description)
         self.thumbnail = try? values.decode(String?.self, forKey: .thumbnail)
         self.datetime = Date.parse(values, key: .datetime)
     }
