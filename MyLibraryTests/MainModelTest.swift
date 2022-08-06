@@ -11,7 +11,7 @@ import Nimble
 @testable import MyLibrary
 
 class MainModelTest: XCTestCase {
-    let stubNetwork = LocalNetworkStub()
+    let stubNetwork = SearchNetworkStub()
     
     var book: Book?
     var model: MainModel!

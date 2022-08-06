@@ -30,7 +30,7 @@
 		C5BC7C67289D2C6D00C740BD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C66289D2C6D00C740BD /* MainViewModel.swift */; };
 		C5BC7C69289D2C7600C740BD /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C68289D2C7600C740BD /* MainModel.swift */; };
 		C5BC7C72289D3BFB00C740BD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC7C71289D3BFB00C740BD /* Storage.swift */; };
-		C5C701F7289D54CA00056E0E /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C701F6289D54CA00056E0E /* LocalNetworkStub.swift */; };
+		C5C701F7289D54CA00056E0E /* SearchNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C701F6289D54CA00056E0E /* SearchNetworkStub.swift */; };
 		C5C701F9289D59CF00056E0E /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C5C701F8289D59CF00056E0E /* networkDummy.json */; };
 		C5C701FB289D5A5600056E0E /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C701FA289D5A5500056E0E /* Dummy.swift */; };
 		C5C701FD289D5BF600056E0E /* MainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C701FC289D5BF600056E0E /* MainModelTest.swift */; };
@@ -77,7 +77,7 @@
 		C5BC7C71289D3BFB00C740BD /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C5C701EC289D543300056E0E /* MyLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C701F5289D54CA00056E0E /* MyLibraryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLibraryTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		C5C701F6289D54CA00056E0E /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
+		C5C701F6289D54CA00056E0E /* SearchNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkStub.swift; sourceTree = "<group>"; };
 		C5C701F8289D59CF00056E0E /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
 		C5C701FA289D5A5500056E0E /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		C5C701FC289D5BF600056E0E /* MainModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelTest.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C701FA289D5A5500056E0E /* Dummy.swift */,
-				C5C701F6289D54CA00056E0E /* LocalNetworkStub.swift */,
+				C5C701F6289D54CA00056E0E /* SearchNetworkStub.swift */,
 				C5C701FC289D5BF600056E0E /* MainModelTest.swift */,
 				C5C701F5289D54CA00056E0E /* MyLibraryTests-Bridging-Header.h */,
 				C5C701F8289D59CF00056E0E /* networkDummy.json */,
@@ -464,7 +464,7 @@
 			files = (
 				C5C701FB289D5A5600056E0E /* Dummy.swift in Sources */,
 				C5C701FD289D5BF600056E0E /* MainModelTest.swift in Sources */,
-				C5C701F7289D54CA00056E0E /* LocalNetworkStub.swift in Sources */,
+				C5C701F7289D54CA00056E0E /* SearchNetworkStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import Stubber
 
 @testable import MyLibrary
 
-class LocalNetworkStub: SearchBookNetwork {
+class SearchNetworkStub: SearchBookNetwork {
     override func searchBook(query: String) -> Single<Result<Book, SearchNetworkError>> {
         return Stubber.invoke(searchBook(query:),args: query)
     }
