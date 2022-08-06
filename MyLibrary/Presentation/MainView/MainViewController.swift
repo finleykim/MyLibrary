@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
 
     private func attribute() {
         title = "MyBook"
-        view.backgroundColor = .white
     }
     
     private func layout() {

@@ -45,7 +45,6 @@ class BookListView: UITableView {
     }
     
     private func attribute() {
-        self.backgroundColor = .white
         self.register(BookListCell.self, forCellReuseIdentifier: "BookListCell")
         self.separatorStyle = .singleLine
         self.rowHeight = 100
