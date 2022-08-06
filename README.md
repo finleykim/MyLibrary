@@ -2,7 +2,7 @@
 ## 기능   
 도서검색, 검색결과정렬(제목오름차순, 최신순)   
 ## 사용기술   
-RxSwift, RxCocoa, SnapKit, URLSession, RestAPI, KingFisher, UnitTest
+RxSwift, RxCocoa, SnapKit, URLSession, RestAPI, KingFisher, UnitTest, MVVM
 ## 구성   
 - MainView(Initial ViewController)   
 MainViewController: 메인페이지 UI구성   
