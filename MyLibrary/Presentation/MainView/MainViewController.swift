@@ -7,12 +7,13 @@
 
 import RxSwift
 import RxCocoa
+import SwiftUI
 
-class MainViewController: UIViewController {
-    let disposeBag = DisposeBag()
+final class MainViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     
-    let listView = BookListView()
-    let searchBar = SearchBar()
+    private let listView = BookListView()
+    private let searchBar = SearchBar()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super .init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -29,7 +30,7 @@ class MainViewController: UIViewController {
         
         listView.bind(viewModel.bookListViewModel)
         searchBar.bind(viewModel.searchBarViewModel)
-
+        
         viewModel.shouldPresentAlert
             .flatMapLatest { alert -> Signal<AlertAction> in
                 let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
@@ -38,9 +39,18 @@ class MainViewController: UIViewController {
             .emit(to: viewModel.alertActionTapped)
             .disposed(by: disposeBag)
     }
-
+    
     private func attribute() {
-        title = "MyBook"
+        view.backgroundColor = .white
+        listView.backgroundColor = .white
+        searchBar.placeholder = "Search"
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.barTintColor = .white
+        searchBar.searchTextField.textColor = .black
+        self.navigationItem.title = "MyLibrary"
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationItem.standardAppearance = appearance
     }
     
     private func layout() {
@@ -60,7 +70,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     typealias Alert = (title: String?, message: String?, actions: [AlertAction], style: UIAlertController.Style)
-
+    
     enum AlertAction: AlertActionConvertible {
         case title, datetime, cancel
         case confirm
@@ -111,5 +121,5 @@ extension MainViewController {
                 }
             }
             .asSignal(onErrorSignalWith: .empty())
-        }
+    }
 }

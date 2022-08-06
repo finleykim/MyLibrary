@@ -9,7 +9,7 @@ import RxCocoa
 import RxSwift
 
 struct MainViewModel {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     let searchBarViewModel = SearchBarViewModel()
     let bookListViewModel = BookListViewModel()

@@ -8,11 +8,11 @@
 import RxCocoa
 import RxSwift
 
-class FilterView: UITableViewHeaderFooterView {
-    let disposeBag = DisposeBag()
+final class FilterView: UITableViewHeaderFooterView {
+    private let disposeBag = DisposeBag()
     
-    let sortButton = UIButton()
-    let bottomBorder = UIView()
+    private let sortButton = UIButton()
+    private let bottomBorder = UIView()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
