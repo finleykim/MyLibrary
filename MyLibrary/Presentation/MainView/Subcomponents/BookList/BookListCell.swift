@@ -9,11 +9,11 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class BookListCell: UITableViewCell {
-    let thumbnailImageView = UIImageView()
-    let nameLabel = UILabel()
-    let titleLabel = UILabel()
-    let datetimeLabel = UILabel()
+final class BookListCell: UITableViewCell {
+    private let thumbnailImageView = UIImageView()
+    private let nameLabel = UILabel()
+    private let titleLabel = UILabel()
+    private let datetimeLabel = UILabel()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -21,10 +21,13 @@ class BookListCell: UITableViewCell {
         thumbnailImageView.contentMode = .scaleAspectFit
         
         titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        titleLabel.textColor = .black
         
         nameLabel.font = .systemFont(ofSize: 14)
+        nameLabel.textColor = .black
         
         datetimeLabel.font = .systemFont(ofSize: 12, weight: .light)
+        datetimeLabel.textColor = .black
         
         [thumbnailImageView, nameLabel, titleLabel, datetimeLabel].forEach {
             contentView.addSubview($0)
@@ -56,7 +59,7 @@ class BookListCell: UITableViewCell {
     }
     
     func setData(_ data: BookListCellData) {
-        thumbnailImageView.kf.setImage(with: data.thumbnailURL, placeholder: UIImage(systemName: "photo"))
+        thumbnailImageView.kf.setImage(with: data.thumbnailURL, placeholder: UIImage(named: "notfound"))
         nameLabel.text = data.description
         titleLabel.text = data.title
         

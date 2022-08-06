@@ -8,10 +8,10 @@
 import RxSwift
 import RxCocoa
 
-class BookListView: UITableView {
-    let disposeBag = DisposeBag()
+final class BookListView: UITableView {
+    private let disposeBag = DisposeBag()
     
-    let headerView = FilterView(
+    private let headerView = FilterView(
         frame: CGRect(
             origin: .zero,
             size: CGSize(width: UIScreen.main.bounds.width, height: 50)
@@ -23,7 +23,7 @@ class BookListView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-
+        
         attribute()
     }
     
@@ -39,6 +39,7 @@ class BookListView: UITableView {
                 let index = IndexPath(row: row, section: 0)
                 let cell = tv.dequeueReusableCell(withIdentifier: "BookListCell", for: index) as! BookListCell
                 cell.setData(data)
+                cell.backgroundColor = .white
                 return cell
             }
             .disposed(by: disposeBag)
@@ -49,6 +50,7 @@ class BookListView: UITableView {
         self.separatorStyle = .singleLine
         self.rowHeight = 100
         self.tableHeaderView = headerView
+        headerView.backgroundColor = .white
     }
 }
 

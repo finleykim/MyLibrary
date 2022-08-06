@@ -8,14 +8,14 @@
 import RxSwift
 import RxCocoa
 
-class SearchBar: UISearchBar {
-    let disposeBag = DisposeBag()
+final class SearchBar: UISearchBar {
+    private let disposeBag = DisposeBag()
     
-    let searchButton = UIButton()
+    private let searchButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
         attribute()
         layout()
     }

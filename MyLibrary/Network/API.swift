@@ -20,7 +20,7 @@ struct SearchBookAPI {
         
         components.queryItems = [
             URLQueryItem(name: "query", value: query),
-            URLQueryItem(name: "size", value: "25")
+            URLQueryItem(name: "size", value: "50")
         ]
         
         return components

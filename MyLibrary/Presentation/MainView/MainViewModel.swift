@@ -9,7 +9,7 @@ import RxCocoa
 import RxSwift
 
 struct MainViewModel {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     let searchBarViewModel = SearchBarViewModel()
     let bookListViewModel = BookListViewModel()
@@ -46,10 +46,10 @@ struct MainViewModel {
         
         Observable
             .combineLatest(
-                            sortedType,
-                            cellData,
-                            resultSelector: model.sort
-                        )
+                sortedType,
+                cellData,
+                resultSelector: model.sort
+            )
             .bind(to: bookListViewModel.bookListCellData)
             .disposed(by: disposeBag)
         

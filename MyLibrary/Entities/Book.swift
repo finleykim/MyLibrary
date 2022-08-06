@@ -35,7 +35,7 @@ struct BookDocument: Decodable {
 extension Date {
     static func parse<K: CodingKey>(_ values: KeyedDecodingContainer<K>, key: K) -> Date? {
         guard let dateString = try? values.decode(String.self, forKey: key),
-            let date = from(dateString: dateString) else {
+              let date = from(dateString: dateString) else {
             return nil
         }
         
@@ -50,7 +50,7 @@ extension Date {
         if let date = dateFormatter.date(from: dateString) {
             return date
         }
-
+        
         return nil
     }
 }
