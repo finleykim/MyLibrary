@@ -36,9 +36,10 @@ struct MainModel {
         return value.documents
             .map {
                 let thumbnailURL = URL(string: $0.thumbnail ?? "")
+                let description = $0.description?[0]
                 return BookListCellData(
                     thumbnailURL: thumbnailURL,
-                    description: $0.description,
+                    description: description,
                     title: $0.title,
                     datetime: $0.datetime
                 )
