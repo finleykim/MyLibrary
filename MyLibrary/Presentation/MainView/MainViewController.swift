@@ -78,9 +78,9 @@ extension MainViewController {
         var title: String {
             switch self {
             case .title:
-                return "Title"
+                return "제목순"
             case .datetime:
-                return "Datetime"
+                return "최신순"
             case .cancel:
                 return "취소"
             case .confirm:

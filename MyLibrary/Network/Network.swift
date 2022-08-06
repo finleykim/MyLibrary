@@ -34,7 +34,7 @@ class SearchBookNetwork {
                 }
             }
             .catch { _ in
-                .just(.failure(.networkError))
+                    .just(.failure(.networkError))
             }
             .asSingle()
     }

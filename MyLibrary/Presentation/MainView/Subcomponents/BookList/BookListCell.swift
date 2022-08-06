@@ -59,7 +59,7 @@ final class BookListCell: UITableViewCell {
     }
     
     func setData(_ data: BookListCellData) {
-        thumbnailImageView.kf.setImage(with: data.thumbnailURL, placeholder: UIImage(systemName: "photo"))
+        thumbnailImageView.kf.setImage(with: data.thumbnailURL, placeholder: UIImage(named: "notfound"))
         nameLabel.text = data.description
         titleLabel.text = data.title
         

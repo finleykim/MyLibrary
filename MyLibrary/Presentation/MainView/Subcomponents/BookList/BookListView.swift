@@ -23,7 +23,7 @@ final class BookListView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-
+        
         attribute()
     }
     

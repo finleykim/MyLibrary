@@ -32,7 +32,7 @@ final class FilterView: UITableViewHeaderFooterView {
     }
     
     private func attribute() {
-        sortButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
+        sortButton.setImage(UIImage(systemName: "arrow.up.arrow.down"), for: .normal)
         bottomBorder.backgroundColor = .lightGray
     }
     

@@ -27,8 +27,8 @@ class MainModelTest: XCTestCase {
         let thumbnail = book?.documents[1].thumbnail
         
         expect(thumbnailURL).to(
-        equal(URL(string: thumbnail ?? "")),
-        description: "Book의 thumbnail이 빈 값이 아닐 경우 thumbnailURL이 cellData에 전달된다"
+            equal(URL(string: thumbnail ?? "")),
+            description: "Book의 thumbnail이 빈 값이 아닐 경우 thumbnailURL이 cellData에 전달된다"
         )
     }
 }

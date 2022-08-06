@@ -46,10 +46,10 @@ struct MainViewModel {
         
         Observable
             .combineLatest(
-                            sortedType,
-                            cellData,
-                            resultSelector: model.sort
-                        )
+                sortedType,
+                cellData,
+                resultSelector: model.sort
+            )
             .bind(to: bookListViewModel.bookListCellData)
             .disposed(by: disposeBag)
         
