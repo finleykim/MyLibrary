@@ -5,9 +5,8 @@
 //  Created by Finley on 2022/08/05.
 //
 
-import RxSwift
 import RxCocoa
-import SwiftUI
+import RxSwift
 
 final class MainViewController: UIViewController {
     private let disposeBag = DisposeBag()
