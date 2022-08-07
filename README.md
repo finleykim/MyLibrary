@@ -1,6 +1,6 @@
 ![Header](http://devfinley.dothome.co.kr/images/mylibrary_readme.jpg)   
 ## 🛠Development Environment
-![Generic badge](https://img.shields.io/badge/ios-14.0-blue.svg)
+![Generic badge](https://img.shields.io/badge/ios-14.1-blue.svg)
 ![Generic badge](https://img.shields.io/badge/xcode-13.3.1-green.svg)   
    
 ## 🤹‍♀️Skills & TechStack   
