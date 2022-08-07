@@ -6,8 +6,9 @@
 //
 
 import UIKit
-import SnapKit
+
 import Kingfisher
+import SnapKit
 
 final class BookListCell: UITableViewCell {
     private let thumbnailImageView = UIImageView()
